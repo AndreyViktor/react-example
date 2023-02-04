@@ -2,7 +2,8 @@ import './App.css';
 import React from "react";
 import {
   BrowserRouter,
-  Route
+  Route,
+  Routes
 } from "react-router-dom";
 import Splash from "./components/Splash.js"
 import Home from "./components/Home.js"
@@ -13,10 +14,12 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Route component = { Splash }  path="/splash" exact />
-        <Route component = { Home }  path="/home" />
-        <Route component = { Search }  path="/search" />
-        <Route component = { Buttons }  path="/buttons" />
+      <Routes>
+        <Route element = { <Splash/> }  path="/splash" />
+        <Route element = { <Home/> }  path="/home" />
+        <Route element = { <Search/> }  path="/search" />
+        <Route element = { <Buttons/> }  path="/buttons" />        
+      </Routes>
     </BrowserRouter>
     </div>
   );
