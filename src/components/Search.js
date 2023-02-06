@@ -22,7 +22,7 @@ function Search({ setSelectedString }) {
         setStrings(stringList)
     })
   
-    const handleSelectString = string => {
+    const onStringClicked = string => {
       setSelectedString(string);
       navigate("/home")
     };
@@ -36,7 +36,7 @@ function Search({ setSelectedString }) {
         onChange={e => setSearchTerm(e.target.value)}
       />
       {filteredStrings.map(string => (
-        <p className="Results" key={string} onClick={() => handleSelectString(string)}>
+        <p className="Results" key={string} onClick={() => onStringClicked(string)}>
           {string}
         </p>
       ))}
