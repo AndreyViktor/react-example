@@ -1,0 +1,23 @@
+.Search{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+}
+
+.SearchBar{
+    background-color: antiquewhite;
+    width: 300px;
+    border-radius: 16px;
+    padding: 24px;
+    margin: 16px;
+    font-size: 30px;
+}
+
+.Results{
+    background-color: antiquewhite;
+    width: 300px;
+    border-radius: 16px;
+    font-size: 30px;
+    
+}

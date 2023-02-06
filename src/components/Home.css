@@ -1,0 +1,26 @@
+.Home{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Link{
+    background-color: rgb(227, 197, 115);
+    color: whitesmoke;  
+    border-radius: 8px;
+    width: 400px;
+    padding: 24px;
+    margin: 30px;
+    font-size: 34px;
+}
+
+.ResultText{
+    background-color: rgb(98, 217, 114);
+    color: whitesmoke;
+    width: 400px;
+    border-radius: 8px;
+    padding: 24px;
+    margin: 30px;
+    font-size: 34px;
+}

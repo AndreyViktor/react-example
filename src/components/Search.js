@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import { useNavigate } from "react-router-dom";
 import GetStrings from "../utils/GetStringsUseCase"
+import "./Search.css"
 
 function Search({ setSelectedString }) {
     const navigate = useNavigate()
@@ -27,14 +28,15 @@ function Search({ setSelectedString }) {
     };
 
   return (
-    <div>
+    <div className="Search">
       <input
+        className="SearchBar"
         type="text"
         value={searchTerm}
         onChange={e => setSearchTerm(e.target.value)}
       />
       {filteredStrings.map(string => (
-        <p key={string} onClick={() => handleSelectString(string)}>
+        <p className="Results" key={string} onClick={() => handleSelectString(string)}>
           {string}
         </p>
       ))}
