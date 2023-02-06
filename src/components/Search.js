@@ -1,13 +1,14 @@
 import React, {useState, useEffect} from "react";
 import { useNavigate } from "react-router-dom";
 import GetStrings from "../utils/GetStringsUseCase"
+
 import "./Search.css"
 
 function Search({ setSelectedString }) {
     const navigate = useNavigate()
-    const [searchTerm, setSearchTerm] = useState("");
-    const [strings, setStrings] = useState([""]);
-    const [filteredStrings, setFilteredStrings] = useState(strings);
+    const [searchTerm, setSearchTerm] = useState("")
+    const [strings, setStrings] = useState([""])
+    const [filteredStrings, setFilteredStrings] = useState(strings)
   
     useEffect(() => {
       setFilteredStrings(
@@ -15,17 +16,22 @@ function Search({ setSelectedString }) {
           string.toLowerCase().includes(searchTerm.toLowerCase())
         )
       );
-    }, [searchTerm, strings]);
+    }, [searchTerm, strings])
 
-    useEffect(()=>{
-        let stringList = GetStrings
-        setStrings(stringList)
-    })
+    useEffect(function(){
+        const getStrings = async () => {
+          const data = await GetStrings()
+          console.log(data)
+          setStrings(data)
+        }
+        getStrings()
+
+    },[])
   
     const onStringClicked = string => {
-      setSelectedString(string);
+      setSelectedString(string)
       navigate("/home")
-    };
+    }
 
   return (
     <div className="Search">
@@ -44,4 +50,4 @@ function Search({ setSelectedString }) {
   );
 }
 
-export default Search;
+export default Search
