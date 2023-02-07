@@ -5,10 +5,10 @@ import {
   Route,
   Routes
 } from "react-router-dom";
-import Splash from "./components/Splash.js"
-import Home from "./components/Home.js"
-import Search from "./components/Search.js"
-import Counter from "./components/Counter.js"
+import Splash from "./components/Splash"
+import Home from "./components/Home"
+import Search from "./components/Search"
+import Counter from "./components/Counter"
 
 function App() {
   const [selectedString, setSelectedString] = useState("");

@@ -1,7 +1,7 @@
 import React, {useEffect} from "react";
 import { useNavigate } from "react-router-dom";
 import "./splash.css"
-import Logo from "../Logo.jpeg"
+const Logo =  require("../Logo.jpeg")
 
 function Splash() {
   const navigate = useNavigate()

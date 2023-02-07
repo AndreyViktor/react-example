@@ -2,7 +2,7 @@ import React from "react";
 import "./Home.css"
 import {Link} from "react-router-dom";
 
-function Home({ selectedString }) {
+function Home({ selectedString } : {selectedString:string}) {
   return (
     <div className="Home">
       <Link className="Link" to="/search">tela de busca</Link>
