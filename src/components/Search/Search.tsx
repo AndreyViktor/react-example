@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import { useNavigate } from "react-router-dom";
-import GetStrings from "../domain/GetStringsUseCase"
-import { CitiesModel } from "../domain/models/cities-list-model"
+import GetStrings from "../../domain/useCases/GetStringsUseCase"
+import { CitiesModel } from "../../domain/models/cities-list-model"
 import "./Search.css"
 
 function Search({ setSelectedString } : {setSelectedString:any}) {
