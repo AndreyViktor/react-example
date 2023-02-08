@@ -1,10 +1,10 @@
-import './App.css';
-import React, {useState} from "react";
+import './App.css'
+import {useState} from "react"
 import {
   BrowserRouter,
   Route,
   Routes
-} from "react-router-dom";
+} from "react-router-dom"
 import Splash from "./components/Splash/Splash"
 import Home from "./components/Home/Home"
 import Search from "./components/Search/Search"
